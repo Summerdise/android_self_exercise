@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">helloworld</string>
+    <string name="button1_text" translatable="false">按钮1</string>
+    <string name="button2_text" translatable="false">按钮2</string>
+    <string name="button3_text" translatable="false">按钮3</string>
+</resources>
