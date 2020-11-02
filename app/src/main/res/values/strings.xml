@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">helloworld</string>
+    <string name="looking">查看通讯录</string>
+    <string name="jump">显式跳转</string>
 </resources>
