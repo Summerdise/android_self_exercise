@@ -2,4 +2,6 @@
     <string name="app_name">helloworld</string>
     <string name="android">android</string>
     <string name="java">java</string>
+    <string name="fragment">一个新的Fragment</string>
+    <string name="description">Android是一个移动端操作系统。可以使用Java,Kotlin,C/C++语言进行开发</string>
 </resources>
