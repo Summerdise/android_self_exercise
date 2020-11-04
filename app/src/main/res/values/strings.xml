@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">helloworld</string>
+    <string name="get_status">请求网络数据</string>
 </resources>
