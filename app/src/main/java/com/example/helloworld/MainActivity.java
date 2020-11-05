@@ -60,16 +60,18 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                         String toastInfo = Objects.requireNonNull(response.body()).string();
                         Gson gson = new Gson();
-                        Wrapper wrapper = gson.fromJson(toastInfo,Wrapper.class);
+                        Wrapper wrapper = gson.fromJson(toastInfo, Wrapper.class);
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                Toast.makeText(MainActivity.this, wrapper.getData().get(0).getName(), Toast.LENGTH_LONG).show();
+                                if (wrapper.getData().size() > 0) {
+                                    Toast.makeText(MainActivity.this, wrapper.getData().get(0).getName(), Toast.LENGTH_LONG).show();
+                                }
                             }
                         });
                     }
                 }
 
-                );
+        );
     }
 }
