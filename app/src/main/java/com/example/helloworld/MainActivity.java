@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
@@ -57,10 +59,12 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                         String toastInfo = Objects.requireNonNull(response.body()).string();
+                        Gson gson = new Gson();
+                        Wrapper wrapper = gson.fromJson(toastInfo,Wrapper.class);
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                Toast.makeText(MainActivity.this, toastInfo, Toast.LENGTH_LONG).show();
+                                Toast.makeText(MainActivity.this, wrapper.getData().get(0).getName(), Toast.LENGTH_LONG).show();
                             }
                         });
                     }
