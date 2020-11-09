@@ -1,13 +1,16 @@
 package com.example.helloworld;
 
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class Person {
+
+    @NonNull
+    @PrimaryKey
     private String name;
     private String avatar;
-
-    public Person(String name, String avatar) {
-        this.name = name;
-        this.avatar = avatar;
-    }
 
     public Person() {
     }
